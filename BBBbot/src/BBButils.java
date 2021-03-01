@@ -24,6 +24,7 @@ public BBButils() {
 	}
 
 public void sondage() {
+	PushbulletClient pc= new PushbulletClient();
 
 	    
 	    while (true) {
@@ -31,6 +32,9 @@ public void sondage() {
 				
 			}
 		    try {
+		    	String reponce =driver.findElement(By.xpath("//div[@id=\'app\']/main/div/div/div[2]/div/button/span")).getText();
+		    	pc.pushNote("Réponce sondage",reponce);
+		    	System.out.println(reponce);
 				driver.findElement(By.xpath("//div[@id=\'app\']/main/div/div/div[2]/div/button/span")).click();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
