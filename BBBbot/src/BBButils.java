@@ -40,6 +40,7 @@ public void sondage() {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		    new Wait(1);
 	    }
 	}
 
